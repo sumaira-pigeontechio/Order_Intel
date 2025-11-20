@@ -1,0 +1,910 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Intel</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+<body>
+    {% comment %} <div class="cursor"></div> {% endcomment %}
+    <div class="navbar">
+        <span>
+            <img src="{% static '/assets/logo.png' %}" alt="Logo">
+        </span>
+        <ul class="poppins-light">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+        </ul>
+        <button class="poppins-regular">
+            Get a Quote
+        </button>
+        
+    </div>
+    <section class="landing">
+        <div class="landing-heading poppins-bold">
+            Reinventing Restaurant Intelligence with AI
+        </div>
+        <div class="landing-heading-2 poppins-light">
+            Meet OrderIntel, the next-generation AI Restaurant Management System (RMS) that uses advanced object tracking, violation detection, and real-time analytics to revolutionize how your kitchen and dining floor operate.
+        </div>
+          <!-- Get In Touch button styled as CTA -->
+        <button class="cta">
+            <span class="poppins-light">Get In Touch</span>
+            {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+            </svg> {% endcomment %}
+        </button>
+        {% comment %} <button>Get In Touch</button> {% endcomment %}
+    </section>
+    <img src="{% static '/assets/Image2.png' %}" alt="BG-IMG" class="background-img-1">
+    {% comment %} <div class="clients-logo">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    </div> {% endcomment %}
+    
+    
+    
+    <section class="clients-section">
+        <p class="clients-text poppins-light">Empowering Brands That Shape the Market.</p>
+
+        <div class="clients-container">
+        <span class="fade fade-left"><img src="{% static '/assets/clients/client4.png' %}" alt="Logo Here"></span>
+
+        <div class="clients-logos">
+            <img src="{% static '/assets/clients/client2.png' %}" alt="Costa Coffee">
+            <img src="{% static '/assets/clients/client1.png' %}" alt="Broadway Pizza">
+            <img src="{% static '/assets/clients/client3.png' %}" alt="Domino's Pizza">
+        </div>
+
+        <span class="fade fade-right"><img src="{% static '/assets/clients/client4.png' %}" alt="Logo Here"></span>
+        </div>
+    </section>
+
+    <section  class="about-section">
+        <div>
+            <div class="about-left-heading poppins-light">Order<span class="poppins-bold">intel</span></div>
+            <div class="about-left-text poppins-light">
+                <div>
+                    OrderIntel is an advanced <b class="poppins-bold">AI Restaurant Management System (RMS)</b> designed to give 
+                    restaurants <b class="poppins-bold">complete visibility</b> and control over their operations. 
+                    Using powerful <b class="poppins-bold">computer vision</b>, the platform transforms ordinary cameras into intelligent
+                     monitors that automate <b class="poppins-bold">object tracking</b>, <b class="poppins-bold">violation detection</b>, and real-time 
+                     <b class="poppins-bold">environment analysis</b>. Instead of relying on manual supervision, OrderIntel ensures 
+                     accurate <b class="poppins-bold">product counts</b>, consistent safety compliance, and a healthier, more efficient workspace.
+                </div>
+                <div>
+                    Our mission is to help restaurants operate smarter by eliminating hidden inefficiencies and reducing operational risks. Whether managing a single outlet or multiple locations, OrderIntel delivers live insights, instant alerts, and data-driven recommendations that enhance performance and protect brand standards. With OrderIntel, restaurants achieve higher productivity, improved safety, and an optimized, future-ready dining experience.
+                </div>
+            </div>
+            {% comment %} <button class="about-left-button poppins-regular">Get In Touch</button> {% endcomment %}
+            <button class="cta">
+                <span class="poppins-light">Get In Touch</span>
+                {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+                </svg> {% endcomment %}
+            </button>
+        </div>
+        <div class="about-right-divabout-right-div poppins-extralight">
+            <div class="about-red-box"><p>OrderIntel uses advanced <b class="poppins-bold">computer vision</b> to monitor every item in your kitchen 
+                    and dining workflow. From ingredient movement to equipment usage, the system 
+                    automatically generates accurate <b class="poppins-bold">product counts</b>, identifies misplaced items, and 
+                    tracks operational flow in real time. This helps reduce waste, prevent shortages, 
+                    and maintain consistency across shifts without relying on manual checks or staff supervision.
+            </p></div>
+            <div class="about-green-box"><p>
+                Our system continuously detects <b class="poppins-bold">safety, hygiene, and compliance violations</b>, ensuring your restaurant 
+                meets industry standards at all times. Whether it's missing gloves, improper food handling, blocked 
+                exits, or unattended stations, OrderIntel instantly flags issues and sends alerts. This proactive 
+                monitoring protects your brand, reduces risk, and ensures every team member follows the right procedures.
+            </p></div>
+            <div class="about-blue-box"><p>
+                OrderIntel creates a <b class="poppins-bold">healthy, efficient, and high-performing environment</b> by analyzing crowd flow, 
+                service delays, workstation cleanliness, and overall operational conditions. The platform identifies 
+                bottlenecks, predicts risks, and recommends improvements, empowering managers to make data-driven decisions. 
+                With real-time dashboards and actionable insights, restaurants can enhance guest experience, speed of service, 
+                and overall operational quality.
+            </p></div>
+        </div>
+    </section>
+
+    
+    {% comment %} <section class="portfolio-section">
+        <div class="portfolio-img1"><img src="{% static '/assets/portfolio-img/1.png' %}" alt="portfolio imgs"></div>
+        <div><img src="{% static '/assets/portfolio-img/2.png' %}" alt="portfolio imgs"></div>
+        <div><img src="{% static '/assets/portfolio-img/3.png' %}" alt="portfolio imgs"></div>
+        <div><img src="{% static '/assets/portfolio-img/4.png' %}" alt="portfolio imgs"></div>
+        <div><img src="{% static '/assets/portfolio-img/5.png' %}" alt="portfolio imgs"></div>
+    </section> {% endcomment %}
+
+
+    
+    <section class="monitoring-section">
+        <div class="grid-container">
+        
+        <!-- Card 1 -->
+        <div class="card card1">
+            <img src="{% static '/assets/portfolio-img/1.png' %}" alt="No gloves detected">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="{% static '/assets/portfolio-img/2.png' %}" alt="Chef with no gloves">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="{% static '/assets/portfolio-img/3.png' %}" alt="Handwash detection">
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="{% static '/assets/portfolio-img/4.png' %}" alt="Top view of restaurant">
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="{% static '/assets/portfolio-img/5.png' %}" alt="Empty steak tray">
+        </div>
+
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2 class="poppins-light">Services</h2>
+        <div class="accordion">
+
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item active">
+                <div class="accordion-header poppins-bold">
+                    <h3>AI Object Tracking</h3>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text poppins-light">
+                    <p>OrderIntel uses advanced computer vision to automatically track ingredients, tools, and equipment across your kitchen and dining areas. It delivers accurate product counts, identifies misplaced items, and monitors workflow movement in real time, reducing waste, preventing shortages, and improving overall operational consistency.</p>
+                    </div>
+                    <div class='service-arrows'>
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                    </div>
+
+                    <div class="accordion-image">
+                    <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
+                    </div>
+                </div>
+            </div>
+            <img src="{% static '/assets/Image3.png' %}" alt="BG-IMG" class="background-img-2">
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header poppins-bold">
+                    <h3>Violation Detection & Safety Compliance</h3>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text poppins-light">
+                    <p>Our system continuously monitors hygiene, safety, and operational standards. From missing gloves to unattended stations or improper food handling, OrderIntel instantly detects violations and sends real-time alerts, helping you maintain strict compliance, avoid risks, and ensure a safe environment for staff and guests.</p>
+                    </div>
+                    <div class='service-arrows'>
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                    </div>
+                    <div class="accordion-image">
+                    <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header poppins-bold">
+                    <h3>Healthy Environment Monitoring</h3>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text poppins-light">
+                    <p>OrderIntel analyzes crowd flow, cleanliness, service delays, and workstation conditions to maintain a healthy, efficient environment. It identifies bottlenecks, predicts risks, and provides actionable insights, helping managers improve service speed, staff performance, and the overall guest experience.</p>
+                    </div>
+                    <div class='service-arrows'>
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                    </div>
+                    <div class="accordion-image">
+                    <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header poppins-bold">
+                    <h3>Real-Time Performance Analytics</h3>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-text poppins-light">
+                    <p>Gain complete operational visibility with live dashboards and intelligent reporting. OrderIntel delivers real-time insights on productivity, safety, and workflow efficiency, enabling data-driven decisions. Managers can optimize processes, track improvements, and maintain consistent performance across single or multi-location restaurants.</p>
+                    </div>
+                    <div class='service-arrows'>
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                    </div>
+                    <div class="accordion-image">
+                    <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="pricing-card-section">
+        <div class="pricing-card-heading poppins-light">Affordable Pricing Plans For Everyone</div>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <div class="offer-heading poppins-bold">Regular License</div>
+                <div class="price poppins-extrabold">$9</div>
+                <p class="poppins-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, in consequat risus tempor eu. Phasellus vitae fermentum sem.</p>
+                {% comment %} <button>Buy Now</button> {% endcomment %}
+                {% comment %} <button class="buy-now-transform-button">
+                    Buy Now
+                </button> {% endcomment %}
+                <button class="cta-price">
+                    <span class="poppins-light">Buy Now</span>
+                    {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg> {% endcomment %}
+                </button>
+                <div class="features poppins-extralight">
+                    <span>Included Features:</span>
+                    <ul>
+                        <li>Time Purchase</li>
+                        <li>Lifetime Access to Future Updates</li>
+                        <li>6 Months of Support from EnvyTheme</li>
+                        <li>Quality Checked by Envato</li>
+                    </ul>
+                </div>
+                <img src="{% static '/assets/hl2.png' %}" alt="No glove detected" class="pricing-card-img1">
+            </div>
+            <div class="pricing-card pricing-card-blue">
+                <div class="offer-heading  poppins-bold">Regular License</div>
+                <div class="price  poppins-extrabold">$9</div>
+                <p class="poppins-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, in consequat risus tempor eu. Phasellus vitae fermentum sem.</p>
+                <button class="cta-price">
+                    <span class="poppins-light">Buy Now</span>
+                    {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg> {% endcomment %}
+                </button>
+                <div class="features poppins-light">
+                    <span>Included Features:</span>
+                    <ul>
+                        <li>Time Purchase</li>
+                        <li>Lifetime Access to Future Updates</li>
+                        <li>6 Months of Support from EnvyTheme</li>
+                        <li>Quality Checked by Envato</li>
+                    </ul>
+                </div>
+                <img src="{% static '/assets/line3.png' %}" alt="No glove detected" class="pricing-card-img2">
+            </div>
+            <div class="pricing-card">
+                <div class="offer-heading poppins-bold">Regular License</div>
+                <div class="price  poppins-extrabold">$9</div>
+                <p class="poppins-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, in consequat risus tempor eu. Phasellus vitae fermentum sem.</p>
+                {% comment %} <button>Buy Now</button> {% endcomment %}
+                
+                <button class="cta-price">
+                    <span class="poppins-light">Buy Now</span>
+                    {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg> {% endcomment %}
+                </button>
+                <div class="features poppins-light">
+                    <span>Included Features:</span>
+                    <ul>
+                        <li>Time Purchase</li>
+                        <li>Lifetime Access to Future Updates</li>
+                        <li>6 Months of Support from EnvyTheme</li>
+                        <li>Quality Checked by Envato</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section">
+        <div class="faq-container">
+            
+            <!-- LEFT SIDEBAR -->
+            <div class="faq-sidebar poppins-semiBold">
+                <h3>Table of content</h3>
+
+                <ul class="faq-menu">
+                    <li class="active">General</li>
+                    <li>Services</li>
+                    <li>Products</li>
+                    <li>Company Profile</li>
+                </ul>
+            </div>
+
+            <div class="faq-content">
+                <h2 class="poppins-bold">Any Question? We can help you.</h2>
+                <p class="faq-subtitle poppins-regular">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar mauris pharetra placerat vulputate.
+                </p>
+
+                <div class="faq-list">
+
+                    <!-- ================= GENERAL ================= -->
+                    <div class="faq-group" data-group="General" style="display:block;">
+
+                        <div class="faq-item active">
+                            <div class="faq-question poppins-medium">
+                                <span>Do we need new cameras to use OrderIntel?</span>
+                                <span class="faq-icon">−</span>
+                            </div>
+                            <div class="faq-answer poppins-light">
+                                No, you can use your existing IP or CCTV cameras. Our system supports most standard protocols, and we’ll determine compatibility during onboarding.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>How accurate is the object tracking/violation detection?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Our computer-vision models are trained on millions of frames and customized per location. We regularly benchmark performance; typical accuracy rates exceed 95% for object recognition and violation detection.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Is this only for the kitchen, or can it monitor dining areas too</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Both. OrderIntel tracks back-of-house operations (inventory, prep, staff) as well as front-of-house activity (guest flow, table occupancy, staff service).</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>How is data accessed, and what about security?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">You access your dashboard through a secure web portal or mobile app. All video and metadata are encrypted both at rest and in transit. We comply with industry-standard security practices.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Can this scale to multiple locations?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Yes. The system is cloud-enabled with multi-tenant support, centralised analytics, and standardised metrics across all sites.</div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= SERVICES ================= -->
+                    <div class="faq-group" data-group="Services" style="display:none;">
+
+                        <div class="faq-item active">
+                            <div class="faq-question poppins-medium">
+                                <span>What services does Order Intel provide?</span>
+                                <span class="faq-icon">−</span>
+                            </div>
+                            <div class="faq-answer poppins-light">We offer AI automation, workflow optimization, and analytics.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Do you offer service customization?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Yes, all services can be customized based on business needs.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Can I request a demo service?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">You can request a demo anytime via our contact page.</div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= PRODUCTS ================= -->
+                    <div class="faq-group" data-group="Products" style="display:none;">
+
+                        <div class="faq-item active">
+                            <div class="faq-question poppins-medium">
+                                <span>What products does Order Intel offer?</span>
+                                <span class="faq-icon">−</span>
+                            </div>
+                            <div class="faq-answer poppins-light">We offer AI tools, dashboards, and process automation modules.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Is there a free trial for products?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Yes, a 7-day free trial is available.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Do products include AI analytics?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Yes, analytics features are included in all plans.</div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= COMPANY PROFILE ================= -->
+                    <div class="faq-group" data-group="Company Profile" style="display:none;">
+
+                        <div class="faq-item active">
+                            <div class="faq-question poppins-medium">
+                                <span>Who is Order Intel?</span>
+                                <span class="faq-icon">−</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Order Intel is a tech company specializing in digital automation.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>Where is Order Intel located?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Our main office is in Karachi, Pakistan.</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question poppins-medium">
+                                <span>When was the company founded?</span>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer poppins-light">Order Intel was founded in 2020.</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT FAQ CONTENT -->
+            {% comment %} <div class="faq-content">
+                <h2>Any Question? We can help you.</h2>
+                <p class="faq-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar mauris pharetra placerat vulputate.
+                </p>
+
+                <div class="faq-list">
+
+                    <!-- FAQ ITEM 1 -->
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <span>What are the Advantages of Order Intel?</span>
+                            <span class="faq-icon">−</span>
+                        </div>
+                        <div class="faq-answer">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar mauris pharetra placerat 
+                            vulputate. Sed elementum volutpat orci, quis tempor lorem auctor ac.
+                        </div>
+                    </div>
+
+                    <!-- FAQ ITEM -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is Order Intel available globally?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            This is the answer content...
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How is Order Intel so useful and unique?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            This is the answer content...
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How to verify Order Intel account?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            This is the answer content...
+                        </div>
+                    </div>
+
+                </div>
+            </div> {% endcomment %}
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="reviews-container">
+
+            <!-- Left Text -->
+            <div class="reviews-text  poppins-light">
+            <h2 class="poppins-light">Our Community <br> With User Reviews</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, 
+                in consequat risus tempor eu. Phasellus vitae fermentum sem. Ut sed molestie dolor.</p>
+            </div>
+
+            <!-- Slider -->
+            <div class="slider-wrapper">
+            <div class="slider">
+
+                <!-- Review 1 -->
+                <div class="review-card active">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="user">
+                        <div>
+                        <h3 class="poppins-semiBold">Ahmed Raza</h3>
+                        <p class="poppins-light">A complete transformation of our operations.</p>
+                        <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text poppins-light-italic">
+                        OrderIntel helped us cut down waste and improve our kitchen workflow instantly. 
+                        The real-time tracking and alerts give us insights we never had before. 
+                        Our staff works more efficiently and confidently.
+                    </p>
+                    <p class="bottom-text">Ahmed Raza, Operations Manager, Urban Grill <span>--------------</span></p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=32" alt="user">
+                        <div>
+                        <h3 class="poppins-semiBold">Sofia Khan</h3>
+                        <p class="poppins-light">The violation detection feature is brilliant.</p>
+                        <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text poppins-light-italic">
+                        It catches hygiene issues the moment they happen. Our compliance scores improved, 
+                        and audits are smoother than ever. OrderIntel is now a non-negotiable part of our 
+                        daily operations.
+                    </p>
+                    <p class="bottom-text">Sofia Khan, Quality Assurance Lead, Bistro Eleven <span>-------------</span></p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=13" alt="user">
+                        <div>
+                        <h3 class="poppins-semiBold">Daniel Fernandes</h3>
+                        <p class="poppins-light">Consistency across shifts finally achieved.</p>
+                        <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text poppins-light-italic">
+                        Training gaps used to affect our safety standards. OrderIntel solved this 
+                        with automated monitoring. Every shift performs at the same high level now.
+                    </p>
+                    <p class="bottom-text">Daniel Fernandes, Restaurant Supervisor, Flame & Fork <span>--------------</span></p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=40" alt="user">
+                        <div>
+                        <h3 class="poppins-semiBold">Maria Hassan</h3>
+                        <p class="poppins-light">Ideal for managing multiple branches.</p>
+                        <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text poppins-light-italic">
+                        With four outlets, we needed centralized visibility. OrderIntel 
+                        provides live dashboards and alerts across all locations. It’s made 
+                        leadership and decision-making so much easier.
+                    </p>
+                    <p class="bottom-text">Maria Hassan, Regional Director, Royal Bites Group <span>--------------</span></p>
+                </div>
+                
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=17" alt="user">
+                        <div>
+                        <h3 class="poppins-semiBold">Junaid Malik</h3>
+                        <p class="poppins-light">Our service speed and guest experience improved instantly.</p>
+                        <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text poppins-light-italic">
+                        The workflow and environment analytics showed us bottlenecks 
+                        we didn’t even know existed. Fixing them boosted our table 
+                        turnover and customer satisfaction.
+                    </p>
+                    <p class="bottom-text">Junaid Malik, General Manager, The Eatery House <span>--------------</span></p>
+                </div>
+                                
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=41" alt="user">
+                        <div>
+                        <h3 class="poppins-semiBold">Christina Lewis</h3>
+                        <p class="poppins-light">Worth every penny — fast ROI.</p>
+                        <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text poppins-light-italic">
+                        Between waste reduction, safety compliance, and smoother operations, 
+                        OrderIntel paid for itself quickly. It’s more than software, it’s 
+                        operational intelligence.
+                    </p>
+                    <p class="bottom-text">Christina Lewis, Owner, Solara Kitchen <span>--------------</span></p>
+                </div>
+            </div>
+
+
+            
+            <!-- Navigation Buttons -->
+            <div class="slider-nav">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            </div>
+
+    </section>
+    <section class="contact-section">
+            <div class="contact-container">
+
+                <!-- LEFT IMAGE BOX -->
+                <div class="contact-image">
+                    {% comment %} <video width="320" height="240" autoplay muted>
+                        <source src="{% static '/assets/contact-video.mp4' %}" type="video/mp4">
+                    </video> {% endcomment %}
+                    <img src="{% static '/assets/contact-logo.png' %}" alt="Order Intel">
+                </div>
+
+                <!-- RIGHT FORM -->
+                <div class="contact-form">
+                    <h2 class="poppins-light">We’d Love To Help</h2>
+                    <p>Say goodbye to the hassle of managing multiple accounts
+                        across different financial institutions.</p>
+
+                    <form>
+                        <div class="form-row">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+
+                        <div class="form-row">
+                            <input type="text" placeholder="Phone Number">
+                            <input type="text" placeholder="Subject">
+                        </div>
+
+                        <textarea placeholder="Message"></textarea>
+
+                        {% comment %} <button class="contact-btn">Get In Touch</button> {% endcomment %}
+                        <button class="cta">
+                            <span class="poppins-Regular">Get In Touch</span>
+                            {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg> {% endcomment %}
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Newsletter -->
+            <div class="footer-Newsletter">
+            <h2 class="poppins-light">Subscribe To Our Newsletter</h2>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your Email">
+                <button>Send</button>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-services">
+            <h2 class="poppins-light">Our Services</h2>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">INDUSTRIES</a></li>
+                <li><a href="#">SERVICES</a></li>
+            </ul>
+            </div>
+
+            <!-- Contacts -->
+            <div class="footer-contacts">
+            <h2 class="poppins-light">Our Contacts</h2>
+            <p class="poppins-light"><i class="fas fa-phone-alt"></i> (832)-916-3145</p>
+            <p class="poppins-light"><i class="fas fa-envelope"></i> contact@orderintel.com</p>
+            <p class="poppins-light"><i class="fas fa-map-marker-alt"></i> 2<sup>nd</sup> Floor 46-C Zulfiqar Comm Street 2</p>
+            <p class="poppins-light" style="padding-left:25px">Phase 8 DHA Karachi, Sindh 75500</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static '/javascript /script.js' %}"></script>
+    <script>
+
+    /* ======================================================
+       NAVBAR → SERVICES CLICK LOGIC
+    ====================================================== */
+    document.querySelector(".navbar ul li:nth-child(3)").addEventListener("click", () => {
+
+        document.querySelector(".services-section").scrollIntoView({
+            behavior: "smooth"
+        });
+
+        // Activate Services tab
+        const faqMenuItems = document.querySelectorAll(".faq-menu li");
+        faqMenuItems.forEach(li => li.classList.remove("active"));
+        faqMenuItems[1].classList.add("active"); // Services
+
+        // Hide all groups
+        document.querySelectorAll(".faq-group")
+            .forEach(group => group.style.display = "none");
+
+        // Show Services group
+        const servicesGroup = document.querySelector('.faq-group[data-group="Services"]');
+        servicesGroup.style.display = "block";
+
+        // Reset all items
+        const faqItems = servicesGroup.querySelectorAll(".faq-item");
+        faqItems.forEach(item => {
+            item.classList.remove("active");
+            item.querySelector(".faq-icon").textContent = "+";
+        });
+
+        // Open first FAQ
+        if (faqItems.length > 0) {
+            faqItems[0].classList.add("active");
+            faqItems[0].querySelector(".faq-icon").textContent = "−";
+        }
+    });
+
+
+
+    /* ======================================================
+       FAQ MENU → SWITCH CATEGORY
+    ====================================================== */
+    document.querySelectorAll(".faq-menu li").forEach(menuItem => {
+        menuItem.addEventListener("click", () => {
+
+            // Activate menu item
+            document.querySelectorAll(".faq-menu li")
+                .forEach(li => li.classList.remove("active"));
+            menuItem.classList.add("active");
+
+            const selectedCategory = menuItem.textContent.trim();
+
+            // Hide all groups
+            document.querySelectorAll(".faq-group")
+                .forEach(group => group.style.display = "none");
+
+            // Show selected
+            const targetGroup = document.querySelector(`.faq-group[data-group="${selectedCategory}"]`);
+            if (targetGroup) targetGroup.style.display = "block";
+
+            // Reset all FAQ items
+            targetGroup.querySelectorAll(".faq-item").forEach(item => {
+                item.classList.remove("active");
+                item.querySelector(".faq-icon").textContent = "+";
+            });
+
+            // Open first item
+            const firstItem = targetGroup.querySelector(".faq-item");
+            if (firstItem) {
+                firstItem.classList.add("active");
+                firstItem.querySelector(".faq-icon").textContent = "−";
+            }
+        });
+    });
+
+
+
+    /* ======================================================
+       FAQ ITEMS OPEN / CLOSE  
+    ====================================================== */
+    document.addEventListener("click", event => {
+        const item = event.target.closest(".faq-item");
+        if (!item) return;
+
+        const group = item.closest(".faq-group");
+
+        group.querySelectorAll(".faq-item").forEach(i => {
+            if (i !== item) {
+                i.classList.remove("active");
+                i.querySelector(".faq-icon").textContent = "+";
+            }
+        });
+
+        item.classList.toggle("active");
+        item.querySelector(".faq-icon").textContent =
+            item.classList.contains("active") ? "−" : "+";
+    });
+
+
+
+    /* ======================================================
+       ACCORDION LOGIC
+    ====================================================== */
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            document.querySelectorAll('.accordion-item')
+                .forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
+
+
+
+    /* ======================================================
+       REVIEW SLIDER (AUTO + BUTTONS)
+    ====================================================== */
+
+    const slider = document.querySelector('.slider');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    const cards = document.querySelectorAll('.review-card');
+
+    let index = 0;
+    const cardWidth = cards[0].offsetWidth + 25;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${index * cardWidth}px)`;
+
+        cards.forEach((card, i) => {
+            card.classList.toggle("active", i === index);
+        });
+    }
+
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % cards.length;
+        updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + cards.length) % cards.length;
+        updateSlider();
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+        index = (index + 1) % cards.length;
+        updateSlider();
+    }, 5000);
+
+    updateSlider();
+
+</script>
+
+
+
+
+</body>
+</html>
