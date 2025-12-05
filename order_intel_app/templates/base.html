@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Intel</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,11 +20,15 @@
         <span>
             <img src="{% static '/assets/logo.png' %}" alt="Logo">
         </span>
+        <!-- HAMBURGER BUTTON -->
+        <div class="menu-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
         <ul class="poppins-light">
             <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Contact Us</li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services<a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
         <button class="poppins-regular">
             Get a Quote
@@ -48,6 +53,7 @@
         {% comment %} <button>Get In Touch</button> {% endcomment %}
     </section>
     <img src="{% static '/assets/Image2.png' %}" alt="BG-IMG" class="background-img-1">
+    <img src="{% static '/assets/background-img-1-responsive.png' %}" alt="BG-IMG" class="background-img-1-responsive">
     {% comment %} <div class="clients-logo">
         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     </div> {% endcomment %}
@@ -70,7 +76,7 @@
         </div>
     </section>
 
-    <section  class="about-section">
+    <section id="about" class="about-section">
         <div>
             <div class="about-left-heading poppins-light">Order<span class="poppins-bold">intel</span></div>
             <div class="about-left-text poppins-light">
@@ -160,7 +166,7 @@
         </div>
     </section>
 
-    <section class="services-section">
+    <section id="services" class="services-section">
         <h2 class="poppins-light">Services</h2>
         <div class="accordion">
 
@@ -239,23 +245,15 @@
 
         </div>
     </section>
-    <section class="pricing-card-section">
+    {% comment %} <section class="pricing-card-section">
         <div class="pricing-card-heading poppins-light">Affordable Pricing Plans For Everyone</div>
         <div class="pricing-cards">
             <div class="pricing-card">
                 <div class="offer-heading poppins-bold">Regular License</div>
                 <div class="price poppins-extrabold">$9</div>
                 <p class="poppins-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, in consequat risus tempor eu. Phasellus vitae fermentum sem.</p>
-                {% comment %} <button>Buy Now</button> {% endcomment %}
-                {% comment %} <button class="buy-now-transform-button">
-                    Buy Now
-                </button> {% endcomment %}
                 <button class="cta-price">
                     <span class="poppins-light">Buy Now</span>
-                    {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg> {% endcomment %}
                 </button>
                 <div class="features poppins-extralight">
                     <span>Included Features:</span>
@@ -272,12 +270,8 @@
                 <div class="offer-heading  poppins-bold">Regular License</div>
                 <div class="price  poppins-extrabold">$9</div>
                 <p class="poppins-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, in consequat risus tempor eu. Phasellus vitae fermentum sem.</p>
-                <button class="cta-price">
+                <button class="cta-price" style="z-index:1">
                     <span class="poppins-light">Buy Now</span>
-                    {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg> {% endcomment %}
                 </button>
                 <div class="features poppins-light">
                     <span>Included Features:</span>
@@ -294,14 +288,9 @@
                 <div class="offer-heading poppins-bold">Regular License</div>
                 <div class="price  poppins-extrabold">$9</div>
                 <p class="poppins-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor egestas nisl, in consequat risus tempor eu. Phasellus vitae fermentum sem.</p>
-                {% comment %} <button>Buy Now</button> {% endcomment %}
                 
                 <button class="cta-price">
                     <span class="poppins-light">Buy Now</span>
-                    {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg> {% endcomment %}
                 </button>
                 <div class="features poppins-light">
                     <span>Included Features:</span>
@@ -314,8 +303,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> {% endcomment %}
 
     <section class="faq-section">
         <div class="faq-container">
@@ -533,6 +521,9 @@
             </div> {% endcomment %}
         </div>
     </section>
+    <section class="get-quote-button">
+        div
+    </section>
 
     <section class="reviews-section">
         <div class="reviews-container">
@@ -666,15 +657,15 @@
             </div>
 
     </section>
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
             <div class="contact-container">
 
                 <!-- LEFT IMAGE BOX -->
                 <div class="contact-image">
-                    {% comment %} <video width="320" height="240" autoplay muted>
+                    <video autoplay muted>
                         <source src="{% static '/assets/contact-video.mp4' %}" type="video/mp4">
-                    </video> {% endcomment %}
-                    <img src="{% static '/assets/contact-logo.png' %}" alt="Order Intel">
+                    </video>
+                    {% comment %} <img src="{% static '/assets/contact-logo.png' %}" alt="Order Intel"> {% endcomment %}
                 </div>
 
                 <!-- RIGHT FORM -->
@@ -712,6 +703,9 @@
 
     <footer class="footer">
         <div class="footer-container">
+            <span class="footer-logo">
+                <img src="{% static '/assets/logo.png' %}" alt="Logo">
+            </span>
             <!-- Newsletter -->
             <div class="footer-Newsletter">
             <h2 class="poppins-light">Subscribe To Our Newsletter</h2>
@@ -727,114 +721,177 @@
             </div>
 
             <!-- Services -->
-            <div class="footer-services">
-            <h2 class="poppins-light">Our Services</h2>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">INDUSTRIES</a></li>
-                <li><a href="#">SERVICES</a></li>
-            </ul>
-            </div>
+            <div class="footer-contents">
+                <div class="footer-services">
+                    <h2 class="poppins-light">Our Services</h2>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#">INDUSTRIES</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                    </ul>
+                </div>
 
-            <!-- Contacts -->
-            <div class="footer-contacts">
-            <h2 class="poppins-light">Our Contacts</h2>
-            <p class="poppins-light"><i class="fas fa-phone-alt"></i> (832)-916-3145</p>
-            <p class="poppins-light"><i class="fas fa-envelope"></i> contact@orderintel.com</p>
-            <p class="poppins-light"><i class="fas fa-map-marker-alt"></i> 2<sup>nd</sup> Floor 46-C Zulfiqar Comm Street 2</p>
-            <p class="poppins-light" style="padding-left:25px">Phase 8 DHA Karachi, Sindh 75500</p>
+                <!-- Contacts -->
+                <div class="footer-contacts">
+                    <h2 class="poppins-light">Our Contacts</h2>
+                    <p class="poppins-light"><i class="fas fa-phone-alt"></i> (832)-916-3145</p>
+                    <p class="poppins-light"><i class="fas fa-envelope"></i> contact@orderintel.com</p>
+                    <p class="poppins-light"><i class="fas fa-map-marker-alt"></i> 2<sup>nd</sup> Floor 46-C Zulfiqar Comm Street 2</p>
+                    <p class="poppins-light" style="padding-left:25px">Phase 8 DHA Karachi, Sindh 75500</p>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="{% static '/javascript /script.js' %}"></script>
-    <script>
+    <!-- Floating Contact Form Overlay -->
+    <div class="floating-form-overlay" id="floatingForm">
+        <div class="floating-form-box">
+            <span class="close-btn" id="closeForm">&times;</span>
+
+            <h2 class="poppins-light">We’d Love To Help</h2>
+            <p>Say goodbye to the hassle of managing multiple accounts
+                across different financial institutions.</p>
+
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+
+                <div class="form-row">
+                    <input type="text" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+
+                <textarea placeholder="Message"></textarea>
+
+                <button class="cta">
+                    <span class="poppins-Regular">Get In Touch</span>
+                </button>
+            </form>
+        </div>
+    </div>
+<script src="{% static 'javascript/script.js' %}"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
     /* ======================================================
-       NAVBAR → SERVICES CLICK LOGIC
+       MOBILE MENU TOGGLE
     ====================================================== */
-    document.querySelector(".navbar ul li:nth-child(3)").addEventListener("click", () => {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
 
-        document.querySelector(".services-section").scrollIntoView({
-            behavior: "smooth"
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+            navbar.classList.toggle("active");
         });
+    }
 
-        // Activate Services tab
-        const faqMenuItems = document.querySelectorAll(".faq-menu li");
-        faqMenuItems.forEach(li => li.classList.remove("active"));
-        faqMenuItems[1].classList.add("active"); // Services
 
-        // Hide all groups
-        document.querySelectorAll(".faq-group")
-            .forEach(group => group.style.display = "none");
-
-        // Show Services group
-        const servicesGroup = document.querySelector('.faq-group[data-group="Services"]');
-        servicesGroup.style.display = "block";
-
-        // Reset all items
-        const faqItems = servicesGroup.querySelectorAll(".faq-item");
-        faqItems.forEach(item => {
-            item.classList.remove("active");
-            item.querySelector(".faq-icon").textContent = "+";
+    /* ======================================================
+       SMOOTH SCROLL (About, Services, Contact)
+    ====================================================== */
+    document.querySelectorAll(".navbar a[href^='#']").forEach(link => {
+        link.addEventListener("click", function (e) {
+            const targetID = this.getAttribute("href");
+            if (targetID && document.querySelector(targetID)) {
+                e.preventDefault();
+                document.querySelector(targetID).scrollIntoView({ behavior: "smooth" });
+                navbar.classList.remove("active");
+            }
         });
-
-        // Open first FAQ
-        if (faqItems.length > 0) {
-            faqItems[0].classList.add("active");
-            faqItems[0].querySelector(".faq-icon").textContent = "−";
-        }
     });
 
 
+    /* ======================================================
+       SERVICES NAV CLICK (3rd Nav Item)
+    ====================================================== */
+    const servicesNav = document.querySelector(".navbar ul li:nth-child(3)");
+    if (servicesNav) {
+        servicesNav.addEventListener("click", () => {
+
+            // Switch FAQ category → Services
+            const faqMenuItems = document.querySelectorAll(".faq-menu li");
+            faqMenuItems.forEach(li => li.classList.remove("active"));
+            if (faqMenuItems[1]) faqMenuItems[1].classList.add("active");
+
+            // Hide all groups
+            document.querySelectorAll(".faq-group")
+                .forEach(group => group.style.display = "none");
+
+            // Show Services group
+            const servicesGroup = document.querySelector('.faq-group[data-group="Services"]');
+            if (servicesGroup) {
+                servicesGroup.style.display = "block";
+
+                // Reset items
+                const faqItems = servicesGroup.querySelectorAll(".faq-item");
+                faqItems.forEach(item => {
+                    item.classList.remove("active");
+                    item.querySelector(".faq-icon").textContent = "+";
+                });
+
+                // Open first
+                if (faqItems[0]) {
+                    faqItems[0].classList.add("active");
+                    faqItems[0].querySelector(".faq-icon").textContent = "−";
+                }
+            }
+
+            navbar.classList.remove("active");
+        });
+    }
+
 
     /* ======================================================
-       FAQ MENU → SWITCH CATEGORY
+       FAQ CATEGORY SWITCHING
     ====================================================== */
     document.querySelectorAll(".faq-menu li").forEach(menuItem => {
         menuItem.addEventListener("click", () => {
-
-            // Activate menu item
+            // Activate selected tab
             document.querySelectorAll(".faq-menu li")
                 .forEach(li => li.classList.remove("active"));
             menuItem.classList.add("active");
 
             const selectedCategory = menuItem.textContent.trim();
 
-            // Hide all groups
+            // Show selected group
             document.querySelectorAll(".faq-group")
                 .forEach(group => group.style.display = "none");
 
-            // Show selected
             const targetGroup = document.querySelector(`.faq-group[data-group="${selectedCategory}"]`);
-            if (targetGroup) targetGroup.style.display = "block";
+            if (!targetGroup) return;
+
+            targetGroup.style.display = "block";
 
             // Reset all FAQ items
-            targetGroup.querySelectorAll(".faq-item").forEach(item => {
+            const items = targetGroup.querySelectorAll(".faq-item");
+            items.forEach(item => {
                 item.classList.remove("active");
                 item.querySelector(".faq-icon").textContent = "+";
             });
 
-            // Open first item
-            const firstItem = targetGroup.querySelector(".faq-item");
-            if (firstItem) {
-                firstItem.classList.add("active");
-                firstItem.querySelector(".faq-icon").textContent = "−";
+            // Open first FAQ item
+            if (items[0]) {
+                items[0].classList.add("active");
+                items[0].querySelector(".faq-icon").textContent = "−";
             }
         });
     });
 
 
-
     /* ======================================================
-       FAQ ITEMS OPEN / CLOSE  
+       FAQ ITEM TOGGLE
     ====================================================== */
     document.addEventListener("click", event => {
         const item = event.target.closest(".faq-item");
         if (!item) return;
 
         const group = item.closest(".faq-group");
+        if (!group) return;
 
+        // Close others
         group.querySelectorAll(".faq-item").forEach(i => {
             if (i !== item) {
                 i.classList.remove("active");
@@ -842,65 +899,92 @@
             }
         });
 
+        // Toggle selected
         item.classList.toggle("active");
         item.querySelector(".faq-icon").textContent =
             item.classList.contains("active") ? "−" : "+";
     });
 
 
-
     /* ======================================================
-       ACCORDION LOGIC
+       ACCORDION (Hover / Auto Open)
     ====================================================== */
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const item = header.parentElement;
-            document.querySelectorAll('.accordion-item')
-                .forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
+    const accordionItems = document.querySelectorAll(".accordion-item");
+    accordionItems.forEach(item => {
+        item.addEventListener("mouseenter", () => {
+            accordionItems.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
         });
     });
 
 
+    /* ======================================================
+       REVIEW SLIDER
+    ====================================================== */
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
+    const cards = document.querySelectorAll(".review-card");
+
+    if (slider && cards.length > 0) {
+        let index = 0;
+        const cardWidth = cards[0].offsetWidth + 25;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${index * cardWidth}px)`;
+            cards.forEach((card, i) => {
+                card.classList.toggle("active", i === index);
+            });
+        }
+
+        nextBtn?.addEventListener("click", () => {
+            index = (index + 1) % cards.length;
+            updateSlider();
+        });
+
+        prevBtn?.addEventListener("click", () => {
+            index = (index - 1 + cards.length) % cards.length;
+            updateSlider();
+        });
+
+        setInterval(() => {
+            index = (index + 1) % cards.length;
+            updateSlider();
+        }, 5000);
+
+        updateSlider();
+    }
+
 
     /* ======================================================
-       REVIEW SLIDER (AUTO + BUTTONS)
+       FLOATING CONTACT FORM
     ====================================================== */
+    const floatingForm = document.getElementById("floatingForm");
+    const closeForm = document.getElementById("closeForm");
 
-    const slider = document.querySelector('.slider');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-    const cards = document.querySelectorAll('.review-card');
+    if (floatingForm && closeForm) {
+        const buttons = document.querySelectorAll("button, .cta");
+        buttons.forEach(btn => {
+            const text = btn.innerText.trim().toLowerCase();
+            if (text.includes("quote") || text.includes("touch")) {
+                btn.addEventListener("click", () => {
+                    floatingForm.style.display = "flex";
+                });
+            }
+        });
 
-    let index = 0;
-    const cardWidth = cards[0].offsetWidth + 25;
+        closeForm.addEventListener("click", () => {
+            floatingForm.style.display = "none";
+        });
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${index * cardWidth}px)`;
-
-        cards.forEach((card, i) => {
-            card.classList.toggle("active", i === index);
+        window.addEventListener("click", e => {
+            if (e.target === floatingForm) {
+                floatingForm.style.display = "none";
+            }
         });
     }
 
-    nextBtn.addEventListener("click", () => {
-        index = (index + 1) % cards.length;
-        updateSlider();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        index = (index - 1 + cards.length) % cards.length;
-        updateSlider();
-    });
-
-    // Auto-slide every 5 seconds
-    setInterval(() => {
-        index = (index + 1) % cards.length;
-        updateSlider();
-    }, 5000);
-
-    updateSlider();
-
+});
 </script>
 
 
