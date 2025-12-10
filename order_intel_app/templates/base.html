@@ -14,11 +14,20 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 </head>
+<script>
+    // Auto-open floating form after 10 seconds
+    setTimeout(() => {
+        const form = document.getElementById("floatingForm");
+        if (form) {
+            form.classList.add("active");
+        }
+    }, 10000);  // 10 seconds
+</script>
 <body>
     {% comment %} <div class="cursor"></div> {% endcomment %}
     <div class="navbar">
         <span>
-            <img src="{% static '/assets/logo.png' %}" alt="Logo">
+            <a href="#"><img src="{% static '/assets/logo.png' %}" alt="Logo"></a>
         </span>
         <!-- HAMBURGER BUTTON -->
         <div class="menu-toggle">
@@ -44,7 +53,7 @@
         </div>
           <!-- Get In Touch button styled as CTA -->
         <button class="cta">
-            <span class="poppins-light">Get In Touch</span>
+            <span class="poppins-light">Schedule a Demo</span>
             {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
             <path d="M1,5 L11,5"></path>
             <polyline points="8 1 12 5 8 9"></polyline>
@@ -180,7 +189,8 @@
                     <p>OrderIntel uses advanced computer vision to automatically track ingredients, tools, and equipment across your kitchen and dining areas. It delivers accurate product counts, identifies misplaced items, and monitors workflow movement in real time, reducing waste, preventing shortages, and improving overall operational consistency.</p>
                     </div>
                     <div class='service-arrows'>
-                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows" class="service-arrows-img">
+                        <img src="{% static '/assets/arrows-responsive.png' %}" alt="arrows" class="service-arrows-responsive">
                     </div>
 
                     <div class="accordion-image">
@@ -199,7 +209,8 @@
                     <p>Our system continuously monitors hygiene, safety, and operational standards. From missing gloves to unattended stations or improper food handling, OrderIntel instantly detects violations and sends real-time alerts, helping you maintain strict compliance, avoid risks, and ensure a safe environment for staff and guests.</p>
                     </div>
                     <div class='service-arrows'>
-                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows" class="service-arrows-img">
+                        <img src="{% static '/assets/arrows-responsive.png' %}" alt="arrows" class="service-arrows-responsive">
                     </div>
                     <div class="accordion-image">
                     <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
@@ -217,7 +228,8 @@
                     <p>OrderIntel analyzes crowd flow, cleanliness, service delays, and workstation conditions to maintain a healthy, efficient environment. It identifies bottlenecks, predicts risks, and provides actionable insights, helping managers improve service speed, staff performance, and the overall guest experience.</p>
                     </div>
                     <div class='service-arrows'>
-                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows" class="service-arrows-img">
+                        <img src="{% static '/assets/arrows-responsive.png' %}" alt="arrows" class="service-arrows-responsive">
                     </div>
                     <div class="accordion-image">
                     <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
@@ -235,7 +247,8 @@
                     <p>Gain complete operational visibility with live dashboards and intelligent reporting. OrderIntel delivers real-time insights on productivity, safety, and workflow efficiency, enabling data-driven decisions. Managers can optimize processes, track improvements, and maintain consistent performance across single or multi-location restaurants.</p>
                     </div>
                     <div class='service-arrows'>
-                        <img src="{% static '/assets/arrows.png' %}" alt="arrows">
+                        <img src="{% static '/assets/arrows.png' %}" alt="arrows" class="service-arrows-img">
+                        <img src="{% static '/assets/arrows-responsive.png' %}" alt="arrows" class="service-arrows-responsive">
                     </div>
                     <div class="accordion-image">
                     <img src="{% static '/assets/services/1.png' %}" alt="No glove detected">
@@ -322,9 +335,9 @@
 
             <div class="faq-content">
                 <h2 class="poppins-bold">Any Question? We can help you.</h2>
-                <p class="faq-subtitle poppins-regular">
+                {% comment %} <p class="faq-subtitle poppins-regular">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar mauris pharetra placerat vulputate.
-                </p>
+                </p> {% endcomment %}
 
                 <div class="faq-list">
 
@@ -521,9 +534,25 @@
             </div> {% endcomment %}
         </div>
     </section>
-    <section class="get-quote-button">
-        div
+    {% comment %} <section class="get-quote-button">
+        <div>
+            <span class="poppins-semiBold">
+                Subscribe To Our Newsletter
+            </span>
+            <button>Get a Quote</button>
+        </div>
+    </section> {% endcomment %}
+    <section class="subscribe-section">
+        <div class="subscribe-box">
+            <div class="sub-text">
+                <h2>Subscribe To<br>Our Newsletter</h2>
+            </div>
+
+            <button class="quote-btn">Get a Quote</button>
+        </div>
     </section>
+
+
 
     <section class="reviews-section">
         <div class="reviews-container">
@@ -674,22 +703,23 @@
                     <p>Say goodbye to the hassle of managing multiple accounts
                         across different financial institutions.</p>
 
-                    <form>
+                    <form action="{% url 'send_mail' %}" method="POST" class="contact-form">
+                        {% csrf_token %}
                         <div class="form-row">
-                            <input type="text" placeholder="First Name">
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" name="fname" placeholder="First Name" required>
+                            <input type="text" name="lname" placeholder="Last Name">
                         </div>
 
                         <div class="form-row">
-                            <input type="text" placeholder="Phone Number">
-                            <input type="text" placeholder="Subject">
+                            <input type="text" name="phone" placeholder="Phone Number" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
 
-                        <textarea placeholder="Message"></textarea>
+                        <textarea name="message" placeholder="Message" required></textarea>
 
                         {% comment %} <button class="contact-btn">Get In Touch</button> {% endcomment %}
                         <button class="cta">
-                            <span class="poppins-Regular">Get In Touch</span>
+                            <span class="poppins-Regular">Send</span>
                             {% comment %} <svg width="13px" height="10px" viewBox="0 0 13 10">
                             <path d="M1,5 L11,5"></path>
                             <polyline points="8 1 12 5 8 9"></polyline>
@@ -714,9 +744,9 @@
                 <button>Send</button>
             </div>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><img src="{% static '/assets/social/2fb.png' %}" alt="FB"></a>
+                <a href="#"><img src="{% static '/assets/social/2insta.png' %}" alt="insta"></a>
+                <a href="#"><img src="{% static '/assets/social/2x.png' %}" alt="x"></a>
             </div>
             </div>
 
@@ -735,16 +765,62 @@
                 <!-- Contacts -->
                 <div class="footer-contacts">
                     <h2 class="poppins-light">Our Contacts</h2>
+
+                    <!-- Phone: Click to Call -->
+                    <p class="poppins-light">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+18329163145" class="contact-link">(832)-916-3145</a>
+                    </p>
+
+                    <!-- Email: Click to Email -->
+                    <p class="poppins-light">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@orderintel.com" class="contact-link">contact@orderintel.com</a>
+                    </p>
+
+                    <!-- Address: Click to open Google Maps -->
+                    <p class="poppins-light">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/duBbwE8ZTnjqnq7E6" 
+                        target="_blank" class="contact-link">
+                        2<sup>nd</sup> Floor 46-C Zulfiqar Comm Street 2
+                        </a>
+                    </p>
+
+                    <p class="poppins-light" style="padding-left:25px">
+                        <a href="https://maps.app.goo.gl/duBbwE8ZTnjqnq7E6"
+                        target="_blank" class="contact-link">
+                        Phase 8 DHA Karachi, Sindh 75500
+                        </a>
+                    </p>
+                </div>
+                {% comment %} <div class="footer-contacts">
+                    <h2 class="poppins-light">Our Contacts</h2>
                     <p class="poppins-light"><i class="fas fa-phone-alt"></i> (832)-916-3145</p>
                     <p class="poppins-light"><i class="fas fa-envelope"></i> contact@orderintel.com</p>
                     <p class="poppins-light"><i class="fas fa-map-marker-alt"></i> 2<sup>nd</sup> Floor 46-C Zulfiqar Comm Street 2</p>
                     <p class="poppins-light" style="padding-left:25px">Phase 8 DHA Karachi, Sindh 75500</p>
-                </div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+
+        <div class="footer-content-responsive">
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a href="#"><img src="{% static '/assets/social/fb.png' %}" alt="FB"></a>
+                <a href="#"><img src="{% static '/assets/social/insta.png' %}" alt="Insta"></a>
+                <a href="#"><img src="{% static '/assets/social/x.png' %}" alt="x"></a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-right poppins-light">
+                <p>© 2025. All rights reserved by Orderintel</p>
             </div>
         </div>
     </footer>
     <!-- Floating Contact Form Overlay -->
-    <div class="floating-form-overlay" id="floatingForm">
+    <div class="floating-form-overlay floating-form" id="floatingForm" >
         <div class="floating-form-box">
             <span class="close-btn" id="closeForm">&times;</span>
 
@@ -752,21 +828,22 @@
             <p>Say goodbye to the hassle of managing multiple accounts
                 across different financial institutions.</p>
 
-            <form>
+            <form action="{% url 'send_mail' %}" method="POST" class="contact-form">
+                {% csrf_token %}
                 <div class="form-row">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" placeholder="Last Name">
                 </div>
 
                 <div class="form-row">
-                    <input type="text" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
                 </div>
 
-                <textarea placeholder="Message"></textarea>
+                <textarea name="message" placeholder="Message" required></textarea>
 
-                <button class="cta">
-                    <span class="poppins-Regular">Get In Touch</span>
+                <button class="cta" type="submit">
+                    <span class="poppins-Regular">Send</span>
                 </button>
             </form>
         </div>
@@ -775,7 +852,8 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-
+    
+    
     /* ======================================================
        MOBILE MENU TOGGLE
     ====================================================== */
@@ -921,14 +999,16 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ======================================================
        REVIEW SLIDER
     ====================================================== */
+    
     const slider = document.querySelector(".slider");
     const nextBtn = document.querySelector(".next");
     const prevBtn = document.querySelector(".prev");
     const cards = document.querySelectorAll(".review-card");
-
+    
     if (slider && cards.length > 0) {
         let index = 0;
-        const cardWidth = cards[0].offsetWidth + 25;
+        //const cardWidth = cards[0].offsetWidth + 25;
+        const cardWidth = cards[0].offsetWidth + 15;
 
         function updateSlider() {
             slider.style.transform = `translateX(-${index * cardWidth}px)`;
@@ -959,14 +1039,14 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ======================================================
        FLOATING CONTACT FORM
     ====================================================== */
-    const floatingForm = document.getElementById("floatingForm");
+    const floatingForm  = document.getElementById("floatingForm");
     const closeForm = document.getElementById("closeForm");
 
     if (floatingForm && closeForm) {
         const buttons = document.querySelectorAll("button, .cta");
         buttons.forEach(btn => {
             const text = btn.innerText.trim().toLowerCase();
-            if (text.includes("quote") || text.includes("touch")) {
+            if (text.includes("Demo") || text.includes("quote") || text.includes("touch") || text.includes("Schedule") ) {
                 btn.addEventListener("click", () => {
                     floatingForm.style.display = "flex";
                 });
@@ -986,9 +1066,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-
-
-
-
 </body>
 </html>
